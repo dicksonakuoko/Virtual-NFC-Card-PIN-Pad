@@ -27,16 +27,14 @@ The research builds on **CADRE**, published at IEEE SECON 2026, and extends the 
 
 ## Folder Structure
 
-The repository will organize research resources into the following components:
+### Script
 
-- **Machine Learning:** Deep learning and Random Forest models for virtual-button recognition.
-- **Domain Adaptation:** Deep CORAL and CORAL implementations for handling card and reader variations.
-- **Conformal Prediction:** Prediction-set calibration and adaptive re-input decisions.
-- **Scripts:** Python programs for training, evaluation, and visualization.
-- **GNU Radio:** Software-defined NFC communication and RF response collection.
-- **Results:** Experimental evaluation and figure-generation scripts.
+The `Script` folder contains Jupyter notebooks implementing the virtual PIN-button recognition framework.
 
-
+- **`01_Dataset_Validation.ipynb`**: Dataset organization and validation across cross-card (CC), cross-reader (CR), and combined card–reader (CCR) domains.
+- **`02_DeepCORAL_Training.ipynb`**: Deep learning model training using multi-target Deep CORAL for domain adaptation.
+- **`03_RF_CORAL_Training.ipynb`**: Random Forest model training using principal component analysis (PCA) and multi-target CORAL alignment.
+- **`04_Conformal_Prediction.ipynb`**: MAPIE-based conformal prediction, calibration, and adaptive recognition evaluation using pretrained deep learning and Random Forest models.
 
 ## Key Features
 
@@ -48,9 +46,11 @@ The repository will organize research resources into the following components:
 
 ## Dependencies and Setup
 
-The implementation uses **Python 3.10** (recommended), machine learning libraries, MAPIE, and GNU Radio.
+The implementation uses **Python 3.10** (recommended), TensorFlow, scikit-learn, MAPIE, NumPy, and other scientific Python libraries.
 
-Specific library versions and installation instructions will be provided with the corresponding research code. The exact Python version used for the reported experiments should be verified before finalizing the reproducibility requirements.
+The notebooks use NFC response datasets collected using GNU Radio. The original datasets and pretrained models must be available locally to run the corresponding experiments.
+
+Specific library versions and installation requirements depend on the experimental environment.
 
 ## Publications
 

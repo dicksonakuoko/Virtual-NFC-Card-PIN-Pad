@@ -1,6 +1,6 @@
 # Adaptive Virtual PIN-Button Recognition on Passive NFC Cards
 
-This repository contains research code and resources for virtual PIN-button recognition on passive NFC cards using the ISO/IEC 15693 protocol. The project combines domain adaptation, machine learning, and conformal prediction to improve recognition accuracy and support adaptive user input across different NFC cards and reader configurations.
+This repository contains research code and resources for virtual PIN-button recognition on passive NFC cards using the ISO/IEC 15693 protocol. The project combines machine learning, domain adaptation, and conformal prediction to improve recognition reliability across different NFC cards and reader configurations.
 
 ---
 
@@ -19,31 +19,41 @@ This repository contains research code and resources for virtual PIN-button reco
 
 ## Overview
 
-This project develops a **12-button virtual PIN pad** on unmodified commercial NFC cards. A passive resonant coil is used to select virtual buttons, producing position-dependent RF responses that are recognized using machine learning.
+This project develops a **12-button virtual PIN pad** on unmodified commercial NFC cards. A passive resonant coil is placed over designated button regions, producing position-dependent RF responses that are recognized using machine learning.
 
-The framework combines **multi-domain adaptation** to handle card and reader variations with **conformal prediction** to determine when an uncertain input requires repetition.
+The framework uses **multi-domain adaptation** to improve recognition across different NFC cards and readers. It further incorporates **conformal prediction** to quantify recognition uncertainty and request additional input when the available evidence is insufficient.
 
-The research builds on **CADRE**, published at IEEE SECON 2026, and extends the framework with uncertainty quantification and adaptive virtual-button recognition.
+This research builds on **CADRE**, published at IEEE SECON 2026, by extending the domain adaptation framework with uncertainty quantification and adaptive virtual-button recognition.
 
 ## Folder Structure
 
+The repository is organized into three main folders:
+
+### Files
+
+Contains supporting research files and resources related to the project.
+
+### GNU Radio
+
+Contains GNU Radio programs for NFC communication and RF response collection.
+
 ### Script
 
-This folder contains Jupyter notebooks for dataset preparation, deep learning and Random Forest model training, domain adaptation, conformal prediction, and adaptive virtual-button recognition.
+Contains Jupyter notebooks for dataset preparation, deep learning and Random Forest training, domain adaptation, conformal prediction, and adaptive virtual-button recognition.
 
 ## Key Features
 
-- **Virtual PIN Pad:** Twelve virtual buttons on unmodified passive NFC cards.
-- **Domain Adaptation:** Robust recognition across different cards and reader configurations.
-- **Uncertainty Quantification:** Conformal prediction for uncertainty-aware recognition.
-- **Adaptive Re-input:** Additional button inputs are requested when the accumulated evidence is insufficient.
-- **ISO/IEC 15693:** NFC communication using a software-defined radio testbed.
+- **Virtual PIN Pad:** Enables twelve virtual buttons on unmodified passive NFC cards.
+- **Domain Adaptation:** Improves recognition across different NFC cards and reader configurations.
+- **Uncertainty Quantification:** Uses conformal prediction to evaluate recognition uncertainty.
+- **Adaptive Re-input:** Requests additional input when the accumulated evidence is insufficient.
+- **ISO/IEC 15693:** Uses software-defined radio for standard-compliant NFC communication.
 
 ## Dependencies and Setup
 
 The implementation uses **Python 3.10** (recommended), TensorFlow, scikit-learn, MAPIE, NumPy, and other scientific Python libraries.
 
-The notebooks use NFC response datasets collected using GNU Radio. The original datasets and pretrained models must be available locally to run the corresponding experiments.
+The Jupyter notebooks use NFC response datasets collected through GNU Radio. The corresponding datasets and pretrained models must be available locally to run the experiments.
 
 Specific library versions and installation requirements depend on the experimental environment.
 

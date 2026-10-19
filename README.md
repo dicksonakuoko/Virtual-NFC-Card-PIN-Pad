@@ -29,12 +29,7 @@ The research builds on **CADRE**, published at IEEE SECON 2026, and extends the 
 
 ### Script
 
-The `Script` folder contains Jupyter notebooks implementing the virtual PIN-button recognition framework.
-
-- **`01_Dataset_Validation.ipynb`**: Dataset organization and validation across cross-card (CC), cross-reader (CR), and combined card–reader (CCR) domains.
-- **`02_DeepCORAL_Training.ipynb`**: Deep learning model training using multi-target Deep CORAL for domain adaptation.
-- **`03_RF_CORAL_Training.ipynb`**: Random Forest model training using principal component analysis (PCA) and multi-target CORAL alignment.
-- **`04_Conformal_Prediction.ipynb`**: MAPIE-based conformal prediction, calibration, and adaptive recognition evaluation using pretrained deep learning and Random Forest models.
+This folder contains Jupyter notebooks for dataset preparation, deep learning and Random Forest model training, domain adaptation, conformal prediction, and adaptive virtual-button recognition.
 
 ## Key Features
 

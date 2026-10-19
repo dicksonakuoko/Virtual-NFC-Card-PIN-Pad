@@ -36,7 +36,7 @@ The repository will organize research resources into the following components:
 - **GNU Radio:** Software-defined NFC communication and RF response collection.
 - **Results:** Experimental evaluation and figure-generation scripts.
 
-*Research code and supporting resources will be added as they are prepared and validated.*
+
 
 ## Key Features
 

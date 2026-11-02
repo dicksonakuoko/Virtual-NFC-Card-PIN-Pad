@@ -55,6 +55,8 @@ The implementation uses **Python 3.10** (recommended), TensorFlow, scikit-learn,
 
 The Jupyter notebooks use NFC response datasets collected through GNU Radio. The corresponding datasets and pretrained models must be available locally to run the experiments.
 
+The original datasets are not included because of their large size. GNU Radio flowgraphs and collection scripts are provided in the `GNU Radio/` folder to support independent data collection.
+
 Specific library versions and installation requirements depend on the experimental environment.
 
 ## Publications
